@@ -39,7 +39,7 @@ public class EriBankPaymentTest{
     }
 
     @Test
-    public void chooseCountry() {
+    public void makePaymentTest() {
 
         driver.findElement(By.xpath("//*[@id='usernameTextField']")).sendKeys("company");
         driver.findElement(By.xpath("//*[@id='passwordTextField']")).sendKeys("company");
