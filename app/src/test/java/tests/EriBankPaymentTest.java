@@ -15,7 +15,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class EriBankPaymentTest{
-    private String testName = "Testing Payment After Changes to Login Button";
+    private String testName = "Testing Payment - Changes to Payment Mechanism";
     private String accessKey = System.getenv("SEETEST_IO_ACCESS_KEY");
     String buildID = System.getenv("TRAVIS_BUILD_NUMBER");
 
@@ -25,6 +25,7 @@ public class EriBankPaymentTest{
 
     @Before
     public void setUp() throws MalformedURLException, InterruptedException {
+        dc.setCapability("testName", testName);
         dc.setCapability("Build Number", buildID);
         dc.setCapability("accessKey", accessKey);
         dc.setCapability("fullReset", true);
@@ -38,7 +39,7 @@ public class EriBankPaymentTest{
     }
 
     @Test
-    public void chooseCountry() {
+    public void makePaymentTest() {
 
         driver.findElement(By.xpath("//*[@id='usernameTextField']")).sendKeys("company");
         driver.findElement(By.xpath("//*[@id='passwordTextField']")).sendKeys("company");
