@@ -17,13 +17,15 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class EriBankPaymentTest{
     private String testName = "Testing Payment After Changes to Login Button";
     private String accessKey = System.getenv("SEETEST_IO_ACCESS_KEY");
+    String buildID = System.getenv("TRAVIS_BUILD_NUMBER");
+
 
     DesiredCapabilities dc = new DesiredCapabilities();
     protected AndroidDriver<AndroidElement> driver = null;
 
     @Before
     public void setUp() throws MalformedURLException, InterruptedException {
-        dc.setCapability();
+        dc.setCapability("Build Number", buildID);
         dc.setCapability("accessKey", accessKey);
         dc.setCapability("fullReset", true);
         dc.setCapability("instrumented", true);

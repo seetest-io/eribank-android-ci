@@ -6,6 +6,7 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
+import java.io.IOException;
 import java.util.List;
 
 import static java.lang.System.exit;
@@ -13,7 +14,7 @@ import static java.lang.System.exit;
 public class TestRunner {
 
     @Test
-    public void test() {
+    public void test() throws IOException {
 
         Class[] cls = {
                 EriBankPaymentTest.class,
@@ -29,7 +30,6 @@ public class TestRunner {
         if (!failures.isEmpty()) {
             for (Failure failure : failures) {
                 System.out.println(failure);
-
             }
             exit(1);
 
