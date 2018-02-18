@@ -26,7 +26,6 @@ notifications:
   slack:
     rooms:
       secure: hdG5Z5kajY1kvoyFivgouvJYiqhRs0iP07X8u4Mmruke3d61FcWVsycYW5vf4ze5J95GIFBVtr02C9su3Rc0vTUIvOtE9oWRz7bqnVk5jg1BovNHf9Vtci7yO8ac/+agKYlCcwNPh5ljRrZPmpfT7Or1jJoWBpc8I59zSUtEwxYQjZz/MksiOGTUYJuYZzi0sN8z04H6/oiDcYDWB5rcrnrowB4AGDq3C/yqtMQ/6QTsA5902i9wWj+JiY/b/S+3ExkZkm4mMoSjlqCYYpkeUJErQDO+dmwdwD/NZF1fDReNFdel9q8G9OI7D+BXkTJNh6Dc8vLaa7uNdRv0SV2VgX5jxrBhxSa5L1O16wk3lqqLYFvf9CmxgoLpZzpjDzO6tx/Vmc+At0vs24IBuF9y8WNy3+zZ8BJCCkuiEnGm/dE2kuEg7GuRxnSgKvX1O8sJMJU91XsiqhUrVUVcJulbTfbg2VnNF1UmryDwIth+sPpPUNKJuXNMOZXHDV4UASJ1gpmeXIEk2gQb1mA5K8xX6XuxGCA0xnQJEKEWnuWjBPs5nHdxEUeV5rtRb9sLp9WKW9iZMIOzEsAjw2gxJRd3/YpelYBDiTH4VeMcbMPk1ESodIC1njA4r2IRDXAg5qgYUxkHmS1V0KrwwJF3zAkkcJOaXchF4hzXeKqG20hFrv0=
-      template: Results of the build: ${TRAVIS_TEST_RESULT}
 
 after_failure:
   - git revert ${TRAVIS_COMMIT}
