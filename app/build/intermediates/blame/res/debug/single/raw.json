@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-android-ci\\app\\build\\intermediates\\res\\merged\\debug\\raw\\version_number",
+        "source": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-android-ci\\app\\src\\main\\res\\raw\\version_number"
+    },
+    {
+        "merged": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-espresso-ci\\app\\build\\intermediates\\res\\merged\\debug\\raw\\version_number",
+        "source": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-espresso-ci\\app\\src\\main\\res\\raw\\version_number"
+    }
+]

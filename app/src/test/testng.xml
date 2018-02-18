@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite" parallel="tests" thread-count="6">
+
+    <test name="EriBank Login - 1">
+        <parameter name="testName" value="EriBank Login - 1"/>
+        <classes>
+            <class name="tests.EriBankLoginTest" />
+        </classes>
+    </test>
+    <parameter name="testName" value="EriBank Login - 2"/>
+    <test name="EriBank Login - 2">
+        <classes>
+            <class name="tests.EriBankLoginTest" />
+        </classes>
+    </test>
+    <parameter name="testName" value="EriBank Login - 3"/>
+    <test name="EriBank Login - 3">
+        <classes>
+            <class name="tests.EriBankLoginTest" />
+        </classes>
+    </test>
+    <parameter name="testName" value="EriBank Login and Pay - 1"/>
+    <test name="EriBank Login and Pay - 1">
+        <classes>
+            <class name="tests.EriBankPaymentTest" />
+        </classes>
+    </test>
+    <parameter name="testName" value="EriBank Login and Pay - 2"/>
+    <test name="EriBank Login and Pay - 2">
+        <classes>
+            <class name="tests.EriBankPaymentTest" />
+        </classes>
+    </test>
+    <parameter name="testName" value="EriBank Login and Pay - 3"/>
+    <test name="EriBank Login and Pay - 3">
+        <classes>
+            <class name="tests.EriBankPaymentTest" />
+        </classes>
+    </test>
+</suite>

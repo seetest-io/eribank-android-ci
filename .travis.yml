@@ -1,0 +1,35 @@
+before_install:
+  - chmod -R +x ./scripts
+
+language: android
+android:
+
+  componenets:
+    - tools
+    - build-tools-26.0.2
+    - android-26
+
+licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+
+script:
+  - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
+  - echo yes | sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
+  - ./gradlew assembleDebug
+  - ./scripts/upload-app.sh
+  - ./gradlew testDebug --tests=tests.TestRunner
+  - ./gradlew clean
+
+notifications:
+  slack:
+    rooms:
+      secure: hdG5Z5kajY1kvoyFivgouvJYiqhRs0iP07X8u4Mmruke3d61FcWVsycYW5vf4ze5J95GIFBVtr02C9su3Rc0vTUIvOtE9oWRz7bqnVk5jg1BovNHf9Vtci7yO8ac/+agKYlCcwNPh5ljRrZPmpfT7Or1jJoWBpc8I59zSUtEwxYQjZz/MksiOGTUYJuYZzi0sN8z04H6/oiDcYDWB5rcrnrowB4AGDq3C/yqtMQ/6QTsA5902i9wWj+JiY/b/S+3ExkZkm4mMoSjlqCYYpkeUJErQDO+dmwdwD/NZF1fDReNFdel9q8G9OI7D+BXkTJNh6Dc8vLaa7uNdRv0SV2VgX5jxrBhxSa5L1O16wk3lqqLYFvf9CmxgoLpZzpjDzO6tx/Vmc+At0vs24IBuF9y8WNy3+zZ8BJCCkuiEnGm/dE2kuEg7GuRxnSgKvX1O8sJMJU91XsiqhUrVUVcJulbTfbg2VnNF1UmryDwIth+sPpPUNKJuXNMOZXHDV4UASJ1gpmeXIEk2gQb1mA5K8xX6XuxGCA0xnQJEKEWnuWjBPs5nHdxEUeV5rtRb9sLp9WKW9iZMIOzEsAjw2gxJRd3/YpelYBDiTH4VeMcbMPk1ESodIC1njA4r2IRDXAg5qgYUxkHmS1V0KrwwJF3zAkkcJOaXchF4hzXeKqG20hFrv0=
+
+after_failure:
+  - git revert ${TRAVIS_COMMIT}
+  - git push origin ${TRAVIS_BRANCH}
+
+after_success:
+  - ./scripts/merge.sh

@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-android-ci\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-android-ci\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-espresso-ci\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "C:\\Users\\nivi.mor\\AndroidStudioProjects\\eribank-espresso-ci\\app\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    }
+]

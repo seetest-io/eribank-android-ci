@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EriBank</string>
+    <string name="hello">Hello World, LoginActivity!</string>
+    <style name="AppTheme" parent="android:Theme.Black"/>
+    <style name="CustomEditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>
