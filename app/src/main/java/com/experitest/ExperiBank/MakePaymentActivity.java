@@ -43,7 +43,7 @@ public class MakePaymentActivity extends Activity {
 		phoneEditField = (EditText) findViewById(R.id.phoneTextField);
 		phoneEditField.addTextChangedListener(new TextWatcher() {
 			public void afterTextChanged(Editable s) {
-				if (readyToMakePayment()) 
+				if (!readyToMakePayment())
 					sendPaymentButton.setEnabled(true);
 				else 
 					sendPaymentButton.setEnabled(false);
