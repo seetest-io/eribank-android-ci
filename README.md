@@ -4,6 +4,7 @@
 1. A demo Android app 
 2. A simple Appium based test
 3. A .yml providing instructions for Travis CI
+4. scripts for bundling and uploading the app
 
 ### Instructions how to run this pipeline
 1. Fork or clone this repo
