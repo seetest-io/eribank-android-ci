@@ -17,3 +17,5 @@
 1. Make any change, commit and push
 2. You will see the build being triggered in Travis CI UI.
 3. Access the seetest cloud (after having signed up to seetest.io) to [see the tests in action](https://docs.seetest.io/display/SEET/Viewing+Your+Automated+Appium+Tests).
+
+Best Of Luck!
